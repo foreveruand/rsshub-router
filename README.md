@@ -7,7 +7,7 @@
 | 文件 | 命名空间 | 路径 | 说明 |
 | --- | --- | --- | --- |
 | `avbase.mjs` | `avbase` | `/avbase/actors/:name` | AVbase 演员作品，使用 Playwright |
-| `southplus.mjs` | `southplus` | `/southplus/:category?` | South Plus 官方 RSS 结构化 |
+| `southplus.mjs` | `southplus` | `/southplus/:category?` | South Plus 最新主题（new.php 主来源，HTML + 官方 RSS 兜底） |
 | `pornhub-search.mjs` | `pornhub-search` | `/pornhub-search/search_url/:keyword/:language?` | PornHub HTML 搜索结果 |
 
 `pornhub-search.mjs` 没有使用 `pornhub.mjs`，因为 `pornhub` 是 RSSHub 内置命名空间，同名文件会导致 RSSHub 启动失败。
@@ -77,6 +77,8 @@ systemctl restart rsshub
 | 变量 | 用途 |
 | --- | --- |
 | `AVBASE_COOKIES` | AVBASE 登录后的 Cookie，可选 |
+| `SOUTHPLUS_COOKIE` | South Plus 登录 Cookie，可选，配置后可读取私有版块的正文与封面 |
+| `SOUTHPLUS_HOSTS` | South Plus 镜像列表，逗号分隔，可选 |
 | `UA` | 自定义 User-Agent |
 | `CHROMIUM_EXECUTABLE_PATH` | Chromium 可执行文件路径 |
 | `PLAYWRIGHT_CDP_ENDPOINT` | 远程浏览器 CDP 地址 |
