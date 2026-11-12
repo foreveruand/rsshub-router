@@ -18,7 +18,8 @@ const rssParser = new Parser({ customFields: { item: [['pubdate', 'pubdate']] } 
 
 const buildHeaders = () => {
     const headers = {
-        'User-Agent': process.env.UA || DEFAULT_USER_AGENT,
+        // PHPWind encrypts its login cookie with the browser User-Agent.
+        'User-Agent': process.env.SOUTHPLUS_UA || process.env.UA || DEFAULT_USER_AGENT,
         'Accept-Language': 'zh-CN,zh;q=0.9,en;q=0.8',
     };
     const cookie = process.env.SOUTHPLUS_COOKIE;

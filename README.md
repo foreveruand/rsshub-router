@@ -77,7 +77,8 @@ systemctl restart rsshub
 | 变量 | 用途 |
 | --- | --- |
 | `AVBASE_COOKIES` | AVBASE 登录后的 Cookie，可选 |
-| `SOUTHPLUS_COOKIE` | South Plus 登录 Cookie，可选，配置后可读取私有版块的正文与封面 |
+| `SOUTHPLUS_COOKIE` | South Plus 登录 Cookie，可选；只需 `eb9e6_winduser`，配置后可读取私有版块的正文与封面 |
+| `SOUTHPLUS_UA` | 与生成 `SOUTHPLUS_COOKIE` 时一致的浏览器 User-Agent，配置 Cookie 时必填 |
 | `SOUTHPLUS_HOSTS` | South Plus 镜像列表，逗号分隔，可选 |
 | `UA` | 自定义 User-Agent |
 | `CHROMIUM_EXECUTABLE_PATH` | Chromium 可执行文件路径 |
